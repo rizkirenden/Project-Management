@@ -1,13 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const pool = require("./src/config/db"); // koneksi PG
 
 dotenv.config();
 
+const pool = require("./src/config/db");
+const routes = require("./src/routes/routes");
+
 const app = express();
 const port = 3000;
-const routes = require("./src/routes/routes");
 
 app.use(
   cors({
